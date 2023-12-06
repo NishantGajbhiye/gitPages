@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0-1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <nav className="navbarItems">
+        <div>
+            <img className="nav-img" src={logo}/>
+        </div>
+          <h1 className="navbar-logo">
+              PVR
+          </h1>
+
+          <div className="menu-icons" onClick={this.handleClick}>
+            <i className={this.state.clicked ? 
+              "fas fa-times" : "fas fa-bars"}></i>
+          </div>
+
+          <ul className={this.state.clicked ?
+              "nav-menu active" : "nav-menu"}>
+          { MenuItems.map((item,index) => {
+            return (
+              <li key={index}>
+                <Link className="cName nav-links" to={item.url}> {item.title}
+                </Link>
+              </li>
+            );
+          })}    
+          </ul>
+        <div className="what">
+        <i className="fa-brands fa-whatsapp"></i>
+        </div>
+    </nav>
+
+    <section class="contact-section">
+
+        <div class="contact-bg">
+            <h3>Get In Touch With Us</h3>
+            <h2> Contact Us</h2>
+
+            <div class="line">
+
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </div>
+
+            <p class="text"> We are professional price action traders 
+                from Nagpur, are passionate about investing and trading. Our team members have a 
+                strong enthusiasm for trading in Indian markets and we likes it.
+                 Our team is a skilled price action trader in the equity, commodity, and currency markets.</p>
+
+
+        </div>
+
+        <div class="contact-body">
+
+            <div class="contact-info">
+
+                <div>
+                    <span> <i class="fas fa-mobile-alt"></i></span>
+                    <span> Phone No.</span>
+                    <span class="text">9373080942</span>
+                    <span class="text"></span>
+                </div>
+
+                <div>
+                    <span> <i class="fas fa-envelope-open "></i></span>
+                    <span> Email</span>
+                    <span class="text">mail@company.com</span>
+                </div>
+
+                <div>
+                    <span> <i class="fas fa-map-marker-alt"></i></span>
+                    <span> Address</span>
+                    <span class="text">plot no. 95 Aaradhana colony, Nara Road 
+                        Near Nirmal colony behind Alisha lawn, Jaripatka , Nagpur - 14</span>
+                </div>
+
+                <div>
+                    <span> <i class="fas fa-clock"></i></span>
+                    <span>Opening Hours</span>
+                    <span class="text">Monday - Saturday (8:00 AM to 9:PM)</span>
+                </div>
+
+            </div>
+
+            
+            <div class="contact-form">
+                
+
+                <form>
+
+                    <div class="enquire">
+                        <h2>Enquire now for more details</h2>
+                    </div>
+
+                    <div>
+                        <input type="text" class="form-control" placeholder="First Name">
+                        <input type="text" class="form-control" placeholder="Last Nmae">
+                    </div>
+
+                    <div>
+                        <input type = "email" class = "form-control"  placeholder="E-mail">
+                        <input type = "text" class = "form-control" placeholder="Phone">
+                      </div>
+
+                    
+
+                    <textarea rows="3" placeholder="Message" class="form-control">   </textarea>
+                    <input type="submit" class="send-btn" value="Submit">
+
+                </form>
+
+                <div>
+
+                    <img src="images/c.jpg" alt="">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class = "map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7622.3959593891495!2d79.08390564090713!3d21.196955098746184!2
+            m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1397d6e1e15%3A0x4e9ff400d2165ea2!2sPVR%20FINANCIAL%20SERVICES%20%7C%20Share
+            %20Market%20Classes%20in%20Nagpur!5e0!3m2!1sen!2sin!4v1700558888892!5m2!1sen!2sin" width="1520" height="300"
+             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        
+    </section>
+
+
+    <div class="footer">
+		<div class="top">
+			<h1>Free Webinar</h1>	
+			<div class="social">
+				<a href="/">
+					<i class="fa-brands fa-facebook-square"></i>
+				</a>
+				<a href="/">
+					<i class="fa-brands fa-instagram-square"></i>
+				</a>
+				<a href="/">
+					<i class="fa-brands fa-twitter-square"></i>
+				</a>
+			</div>
+		</div>
+	<div class="bottom">
+	<form class="form">
+      <label >Name</label>
+      <input 
+      type="text"
+      placeholder="name"
+      />
+      <label >Phone No</label>
+      <input 
+      type="number"
+      placeholder="number"
+      />
+      <label >Course Option</label>
+      <select value={course} onChange={handleChange}>
+      	<option style="display: none;" selected="selected" value=""> </option>
+      	<option value="Stock">Stock Market Overview</option>
+      	<option value="Analysis">Fundamental Analysis</option>
+      	<option value="Technical">Technical Analysis</option>
+      </select>
+      <div class="sub">
+      <button class="subb">Send</button>
+      </div>
+    </form>
+    <div class="cour">
+    <p class="pp">Our Courses</p>
+   	<ul class="core">
+   	<li >
+        <Link>Stock Market Overview</Link>
+    </li>
+    <li >
+        <Link>Fundamental Analysis</Link>
+    </li>
+    <li >
+        <Link>Technical Analysis</Link>
+    </li>
+    </ul>
+    </div>
+
+    <div class="about">
+    <p>At PVR, we pride ourselves on 
+			offering comprehensive and accessible financial 
+			education, particularly in stock market analysis, 
+			investment strategies, and diverse financial 
+			instruments. Our seasoned experts bring decades of
+			 experience, delivering hands-on workshops, 
+			 seminars, and personalized mentoring sessions.
+	</p>
+    </div>
+
+	</div>
+	<div class='company'>
+        © 2023 Copyright: MTP Solutions
+    </div>
+	</div>
+
+
+
+</body>
+</html>
